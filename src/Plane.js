@@ -1,9 +1,8 @@
 'use strict';
 
 function Plane(){}
-var airport = new Airport();
 Plane.prototype = {
-  land: function(){
+  land: function(airport){
     airport.clearForLanding(this);
   }
 };

@@ -3,7 +3,7 @@
 describe('Plane', function() {
   var plane;
   var airport;
-  beforeEach(function){
+  beforeEach(function(){
     plane = new Plane();
     airport = jasmine.createSpyObj('airport',['clearForLanding']);
   });
