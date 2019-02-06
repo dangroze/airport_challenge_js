@@ -2,10 +2,11 @@
 
 function Plane(){}
 Plane.prototype = {
-  land: function(airport){
+  land: function(airport) {
     airport.clearForLanding(this);
+    this._location = airport;
   },
   takeoff: function(airport){
-    airport.clearForTakeOff();
+    this._location.clearForTakeOff();
   }
 };

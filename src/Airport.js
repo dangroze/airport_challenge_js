@@ -11,7 +11,6 @@ Airport.prototype = {
     this._planes.push(plane);
   },
   clearForTakeOff: function(plane) {
-
     this._planes.pop();
   }
 };
