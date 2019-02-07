@@ -10,7 +10,13 @@ Airport.prototype = {
   clearForLanding: function(plane) {
     this._planes.push(plane);
   },
-  clearForTakeOff: function(plane) {
+  clearForTakeoff: function(plane) {
+    if(this.isStormy()) {
+      throw new Error('Takeoff error: Bad Weather');
+    }
     this._planes.pop();
+  },
+  isStormy: function() {
+    return false;
   }
 };
