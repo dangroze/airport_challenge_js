@@ -20,8 +20,12 @@ describe('Feature test:', function(){
   });
   it('Planes cannot take off when stormy weather', function(){
     plane.land(airport);
-    spyOn(airport,'isStormy').and.returnValue(true);
+    spyOn(airport, 'isStormy').and.returnValue(true);
     expect(function(){ plane.takeoff();}).toThrowError('Takeoff error: Bad Weather');
     expect(airport.planes()).toContain(plane);
   });
-});
+  it('Planes cannot land when stormy weather', function() {
+    spyOn(airport, 'isStormy').and.returnValue(true);
+    expect(function(){ plane.land(airport);}).toThrowError('Landing error: Bad Weather');
+  });
+})
