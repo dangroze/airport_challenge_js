@@ -9,4 +9,4 @@ Plane.prototype = {
   takeoff: function(){
     this._location.clearForTakeoff();
   }
-};
+}
